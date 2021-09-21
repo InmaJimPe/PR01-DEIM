@@ -4,27 +4,28 @@ using UnityEngine;
 
 public class Ejercicio1 : MonoBehaviour
 {
-    [SerializeField] int num1 = 10;
-    [SerializeField] float dec1 = 5.9f;
-    bool bool1 = false;
-    string text1 = "Hola mundo";
-    float multiplicar;
+    int x = 0;
     // Start is called before the first frame update
     void Start()
     {
-        float resultado;
-        resultado = num1 + dec1;
-        print(resultado);
-        multiplicar = num1 * dec1;
-        print(multiplicar);
-        print("resultado" + multiplicar);
-        print("Esta vivo" + bool1);
-       
+        
     }
 
     // Update is called once per frame
     void Update()
     {
         
+        if(x < 10) 
+        {
+            print("X es menos que 10");
+            x++;
+
+        }
+
+        if(x == 10) 
+        {
+            print("Igual a 10");
+            x = 11;
+        }
     }
 }
