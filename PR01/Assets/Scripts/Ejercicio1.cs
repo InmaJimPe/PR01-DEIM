@@ -4,17 +4,17 @@ using UnityEngine;
 
 public class Ejercicio1 : MonoBehaviour
 {
-    private int num1 = 10;
-    private float dec1 = 5.9f;
-    private bool bool1 = false;
-    private string text1 = "Hola mundo";
+    [SerializeField] int num1 = 10;
+    [SerializeField] float dec1 = 5.9f;
+    [SerializeField] bool bool1 = false;
+    [SerializeField] string text1 = "Hola mundo";
     // Start is called before the first frame update
     void Start()
     {
-        print(num1);
-        print(text1);
-        print(bool1);
-        print(dec1);
+        print(num1 = 9);
+        print(text1 = "Adios");
+        print(bool1 = true);
+        print(dec1 = 2.5f);
     }
 
     // Update is called once per frame

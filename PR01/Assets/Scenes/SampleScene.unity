@@ -407,3 +407,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4ed830a921f3fab469bc9012b95d57ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  num1: 3
+  dec1: 9.9
+  bool1: 0
+  text1: Q tal
