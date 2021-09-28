@@ -4,79 +4,81 @@ using UnityEngine;
 
 public class Ejercicio1 : MonoBehaviour
 {
-    [SerializeField] float num1;
-    [SerializeField] float num2;
-    [SerializeField] string op;
+    
 
-    bool par = true;
+    
     // Start is called before the first frame update
     void Start()
     {
-        Calcular(num1, num2, op);
 
+
+        StartCoroutine("Reloj");
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown("space"))
-        {
-            Calcular(num1, num2, op);
-
-        }
+        
     }
-
-    void Calcular(float num1, float num2, string op)
+    IEnumerator Reloj()
     {
-        float resultado = 0f;
-        if (op == "dividir")
+
+        int segundos = 0;
+        int minutos = 0;
+        int horas = 0;
+        string textoreloj;
+
+        for (int n = 0; ; n++)
         {
 
-            resultado = num1 / num2;
+            segundos++;
+
+            if (segundos > 59)
+            {
+                minutos++;
+                segundos = 0;
+
+
+            }
+
+            if (minutos > 59)
+            {
+                horas++;
+                minutos = 0;
+
+
+            }
+
+            textoreloj = horas.ToString("D2") + ":" + minutos.ToString("D2") + ":" + segundos.ToString("D2");
+
+            print(textoreloj);
+
+            yield return new WaitForSeconds(1f); 
+
+            
+
+
+
+
+
+
 
         }
-        else if (op == "multiplicar")
-        {
-
-            resultado = num1 * num2;
-
-        }
-        else if (op == "sumar")
-        {
-
-            resultado = num1 + num2;
-
-        }
-        else if (op == "restar")
-        {
-
-            resultado = num1 - num2;
-
-        }
-        print(resultado);
-        resultado = resultado%2;
-
-        if(resultado == 0)
-        {
-            print("Par ");
-            par = true;
-        }
-        else
-        {
-            print("Impar ");
-            par = false;
-        }
-
 
 
     }
-
 
 
 
 
 
 }
+
+
+
+
+
+
 
 
