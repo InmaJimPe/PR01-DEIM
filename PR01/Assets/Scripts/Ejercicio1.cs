@@ -4,26 +4,20 @@ using UnityEngine;
 
 public class Ejercicio1 : MonoBehaviour
 {
-    int x = 10;
+    int aleatorio = 0;
+    [SerializeField] int numElegido;
     // Start is called before the first frame update
     void Start()
     {
-        while (x > 0)
+        while(aleatorio != numElegido)
         {
-            print(x);
-            x--;
-            if (x == 0)
-                print("es un cero");
-            
+            aleatorio = Random.Range(0, 10);
+            print(aleatorio);
+
+
         }
-        for (x = 10; x >= 0; x -= 1)
-        {
-            print(x);
-            if (x == 0)
-                print("es un cerapio");
-            if (x == 1)
-                print("vamos por el uno");
-        }
+
+
 
     }
 
