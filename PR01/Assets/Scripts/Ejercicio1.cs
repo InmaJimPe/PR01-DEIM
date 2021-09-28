@@ -12,12 +12,17 @@ public class Ejercicio1 : MonoBehaviour
         {
             print(x);
             x--;
-
+            if (x == 0)
+                print("es un cero");
+            
         }
         for (x = 10; x >= 0; x -= 1)
         {
             print(x);
-
+            if (x == 0)
+                print("es un cerapio");
+            if (x == 1)
+                print("vamos por el uno");
         }
 
     }
