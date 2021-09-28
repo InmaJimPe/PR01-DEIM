@@ -4,27 +4,40 @@ using UnityEngine;
 
 public class Ejercicio1 : MonoBehaviour
 {
-    int aleatorio = 0;
-    [SerializeField] int numElegido;
+    [SerializeField] string nombre;
     // Start is called before the first frame update
     void Start()
     {
-        while(aleatorio != numElegido)
-        {
-            aleatorio = Random.Range(0, 10);
-            print(aleatorio);
+       
+        
 
+    }
+    void Saludos(string nombre)
+    {
+
+        print("saludos " + nombre);
+
+    }
+    
+    
+    // Update is called once per frame
+    void Update()
+    {
+        if (Input.GetKey(KeyCode.Space))
+        {
+
+            Saludos(nombre);
 
         }
 
 
-
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-       
-    }
+    
+
+
+
+
 }
+
+
